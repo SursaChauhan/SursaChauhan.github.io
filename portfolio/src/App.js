@@ -1,30 +1,17 @@
-import React,{useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './Navbar/Navbar';
-import { ThemeProvider } from './ThemeContext';
-const lightTheme = {
-  navbarBg: 'red',
-  navbarText: '#333',
-};
-
-const darkTheme = {
-  navbarBg: 'black',
-  navbarText: '#fff',
-};
+import Navbar from './Components/NavbarSection/Navbar'
+import HomeSection from './Components/HomeSection/Home';
 
 function App() {
-
-  const [theme, setTheme] = useState('light');
-
-  const toggleTheme = () => {
-    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
-
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-    <Navbar toggleTheme={toggleTheme} />
-  </ThemeProvider>
+    <div className="App">
+      <Navbar/>
+      <div id='main_wrapper'>
+        <HomeSection />
+       
+      </div>
+    </div>
   );
 }
 

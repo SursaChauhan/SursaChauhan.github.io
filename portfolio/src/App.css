@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #788aad;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,35 +34,5 @@
   }
   to {
     transform: rotate(360deg);
-  }
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-.jTacIQ {
-  width: 70%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-@media (max-width: 768px) {
- 
-  .jTacIQ {
-    width: 50%;
-    display: flex;
-    justify-content: right;
-    padding-right: 3%;
-    align-items: center;
   }
 }

@@ -1,0 +1,142 @@
+#nav-menu {
+    position: fixed;
+    width: 100%;
+    background-color: #191924;
+    padding: 8px;
+    z-index: 1000;
+  }
+  
+  #largeScreenNavbar {
+    max-width: 1280px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    margin: auto;
+  }
+  #largeScreenNavbar > a > h2 {
+    text-wrap: nowrap;
+    color: #7957d5;
+  }
+  #largeScreenNavbar > div:nth-child(1) {
+    width: 150px;
+    /* border: 1px solid red; */
+  }
+  
+  #largeScreenNavbar > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    /* border: 1px solid red; */
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .active {
+    color: #7957d5;
+    border-bottom: 1px solid #7957d5;
+    padding-bottom: 3px;
+  }
+  .navbarLinks > a:hover {
+    color: #7957d5;
+    border-bottom: 1px solid #7957d5;
+    padding-bottom: 3px;
+  }
+  
+  #largeScreenNavbar > div:nth-child(3) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  
+  .github,
+  .resume {
+    color: #854ce6;
+    border-radius: 20px;
+    border: 1px solid #854ce6;
+    background-color: #191924;
+    cursor: pointer;
+    padding: 2px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.6s ease-in-out;
+    margin-left: 20px;
+    font-size: 0.9rem;
+  }
+  .resume:hover,
+  .github:hover {
+    background-color: #854ce6;
+    color: white;
+  }
+  #smallScreenNavbar {
+    display: flex;
+    max-width: 1350px;
+    height: 55px;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 15px;
+  }
+  #smallScreenNavbar > div:first-child {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    width: 30%;
+  }
+  #smallScreenNavbar > div:last-child {
+    /* border: 1px solid red; */
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    cursor: pointer;
+  }
+  
+  img {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  
+  #smallScreenDropDown {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(29, 15, 15, 0.9);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  #smallScreenDropDown > div {
+    display: flex;
+    padding-top: 80px;
+    flex-direction: column;
+    text-align: center;
+    /* padding-right: 30px; */
+    padding-bottom: 20px;
+    gap: 15px;
+    /* width: 100%; */
+    /* background-color: rgba(133, 76, 230, 0.5); */
+  }
+  
+  #smallScreenDropDown button {
+    margin: 0;
+    width: 110px;
+  }
+  
+  @media screen and (width>=800px) {
+    #smallScreenNavbar {
+      display: none;
+    }
+    #smallScreenDropDown {
+      display: none;
+    }
+  }
+  @media screen and (width<800px) {
+    #largeScreenNavbar {
+      display: none;
+    }
+  }
