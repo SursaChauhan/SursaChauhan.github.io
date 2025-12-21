@@ -1,3 +1,32 @@
-# https://www.robotstxt.org/robotstxt.html
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Block common sensitive paths for all bots
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /.env
+Disallow: /.git
+Disallow: /config/
+Disallow: /server/
+Disallow: /node_modules/
+Disallow: /logs/
+
+# Allow public assets
+Allow: /assets/
+Allow: /images/
+Allow: /favicon.ico
+Allow: /robots.txt

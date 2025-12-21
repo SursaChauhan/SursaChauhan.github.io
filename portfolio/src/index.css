@@ -1,13 +1,225 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* VS Code Dark Theme Colors */
+    --background: 220 13% 12%;
+    --background-secondary: 220 13% 14%;
+    --background-tertiary: 220 13% 17%;
+    
+    --foreground: 0 0% 85%;
+    --foreground-muted: 0 0% 60%;
+    
+    /* Editor colors */
+    --editor-bg: 220 13% 12%;
+    --editor-line: 220 10% 20%;
+    --editor-selection: 210 100% 40%;
+    
+    /* Sidebar */
+    --sidebar-bg: 220 13% 10%;
+    --sidebar-hover: 220 13% 15%;
+    --sidebar-active: 220 13% 18%;
+    
+    /* Tabs */
+    --tab-bg: 220 13% 14%;
+    --tab-active: 220 13% 12%;
+    --tab-border: 220 10% 20%;
+    
+    /* Top bar */
+    --topbar-bg: 220 13% 8%;
+    
+    /* Accent colors - Yellow/Gold for active */
+    --primary: 45 100% 50%;
+    --primary-foreground: 220 13% 10%;
+    
+    /* Secondary - Blue for links */
+    --secondary: 210 80% 60%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Syntax highlighting */
+    --syntax-keyword: 300 60% 70%;
+    --syntax-string: 40 80% 60%;
+    --syntax-function: 200 80% 70%;
+    --syntax-property: 160 60% 60%;
+    --syntax-comment: 0 0% 50%;
+    --syntax-tag: 350 70% 65%;
+    --syntax-attribute: 30 80% 65%;
+    
+    /* UI Elements */
+    --border: 220 10% 20%;
+    --ring: 45 100% 50%;
+    --muted: 220 10% 25%;
+    --muted-foreground: 0 0% 60%;
+    
+    --card: 220 13% 14%;
+    --card-foreground: 0 0% 85%;
+    
+    --popover: 220 13% 14%;
+    --popover-foreground: 0 0% 85%;
+    
+    --accent: 220 13% 20%;
+    --accent-foreground: 0 0% 85%;
+    
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --input: 220 10% 20%;
+    
+    --radius: 0.25rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Syntax highlighting classes */
+.syntax-keyword {
+  color: hsl(var(--syntax-keyword));
+}
+
+.syntax-string {
+  color: hsl(var(--syntax-string));
+}
+
+.syntax-function {
+  color: hsl(var(--syntax-function));
+}
+
+.syntax-property {
+  color: hsl(var(--syntax-property));
+}
+
+.syntax-comment {
+  color: hsl(var(--syntax-comment));
+  font-style: italic;
+}
+
+.syntax-tag {
+  color: hsl(var(--syntax-tag));
+}
+
+.syntax-attribute {
+  color: hsl(var(--syntax-attribute));
+}
+
+/* Tab active indicator */
+.tab-active {
+  border-top: 2px solid hsl(var(--primary));
+}
+
+/* Selection highlight */
+::selection {
+  background: hsl(var(--editor-selection) / 0.4);
+}
+
+/* Line number styling */
+.line-number {
+  @apply text-muted-foreground select-none text-right;
+  min-width: 2.5rem;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: hsl(var(--primary)) }
+}
+
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid hsl(var(--primary));
+  white-space: nowrap;
+  animation: typing 2s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Timeline connector */
+.timeline-connector {
+  position: relative;
+}
+
+.timeline-connector::before {
+  content: '';
+  position: absolute;
+  left: -1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: hsl(var(--border));
+}
+
+.timeline-connector::after {
+  content: '';
+  position: absolute;
+  left: calc(-1rem - 4px);
+  top: 0.75rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: hsl(var(--primary));
+}
+
+/* Hover card effect */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Skill badge */
+.skill-badge {
+  @apply px-3 py-1.5 rounded text-sm font-mono transition-all duration-200;
+  background: hsl(var(--accent));
+  border: 1px solid hsl(var(--border));
+}
+
+.skill-badge:hover {
+  background: hsl(var(--primary) / 0.2);
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+/* Social link hover */
+.social-link {
+  @apply transition-all duration-200;
+}
+
+.social-link:hover {
+  color: hsl(var(--primary));
+  transform: translateY(-2px);
 }
