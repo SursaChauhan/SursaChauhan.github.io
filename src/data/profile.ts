@@ -7,7 +7,7 @@ export const profile = {
   location: "Bengaluru, Karnataka, India",
   bio: "Backend Software Engineer with hands-on experience building scalable APIs and distributed backend systems. Currently working at Ace Turtle on B2B order flows, returns, and inventory management platforms. Passionate about clean architecture, system design, and solving real-world engineering problems.",
   avatar: avatar,
-  resumeUrl: "https://drive.google.com/file/d/1ECvL37_L8Er8pNw8gZCQ5XrbWANZ9dtX/view?usp=sharing", // Add your resume URL here
+  resumeUrl: "https://drive.google.com/file/d/12WYcfLeui5Z1TVJtXdKEn5O74YM4oVHp/view?usp=sharing",
   techStack: ["Node.js", "Express.js", "MongoDB", "PostgreSQL", "Redis", "Docker", "Git"],
   stats: [
     "1+ years of professional backend experience",
