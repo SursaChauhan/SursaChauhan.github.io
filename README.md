@@ -1,73 +1,87 @@
-# Welcome to your Lovable project
+# 👋 Surendra Singh — Developer Portfolio
 
-## Project info
+Personal portfolio website showcasing my work, experience, and skills as a **Software Engineer**.  
+Built with a modern frontend stack and deployed via **GitHub Pages**.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🌐 **Live Website**  
+👉 https://sursachauhan.github.io
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🧑‍💻 About Me
 
-**Use Lovable**
+I’m **Surendra Singh**, a Software Engineer with hands-on experience in building scalable backend systems and modern web applications.  
+Currently working on high-volume B2B systems, APIs, and distributed workflows, with a strong focus on clean architecture and performance.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Tech Stack
 
-**Use your preferred IDE**
+This portfolio is built using:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- ⚡ **Vite**
+- ⚛️ **React**
+- 🟦 **TypeScript**
+- 🎨 **Tailwind CSS**
+- 🧩 **shadcn/ui**
+- 🎞 **Framer Motion**
+- 🧰 **Lucide Icons**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📁 Repository Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+This repository follows a clean, professional setup:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```text
+main        → Source code (React + Vite)
+gh-pages    → Production build (dist output)
 
-# Step 3: Install the necessary dependencies.
-npm i
+	•	main branch contains all source code
+	•	gh-pages branch is used only for deployment
+	•	Live site is served from gh-pages
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+⸻
+
+🚀 Local Development
+
+Prerequisites
+	•	Node.js (v18+ recommended)
+	•	npm
+
+Setup
+ # Clone the repository
+git clone https://github.com/SursaChauhan/SursaChauhan.github.io.git
+
+# Switch to main branch (source code)
+git checkout main
+
+# Install dependencies
+npm install
+
+# Start local dev server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+The app will be available at:
+http://localhost:8080
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+📦 Build for Production
+ npm run build
 
-**Use GitHub Codespaces**
+ This generates a dist/ folder, which is deployed to the gh-pages branch.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+⸻
 
-## What technologies are used for this project?
+🌍 Deployment
+	•	Hosting: GitHub Pages
+	•	Deployment branch: gh-pages
+	•	Domain: https://sursachauhan.github.io
 
-This project is built with:
+Deployment is handled by pushing the Vite build output to the gh-pages branch.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+⸻
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+📫 Contact
+	•	Email: ss0622187@gmail.com
+	•	GitHub: https://github.com/SursaChauhan
+	•	LinkedIn: https://www.linkedin.com/in/surendra-schauhan
